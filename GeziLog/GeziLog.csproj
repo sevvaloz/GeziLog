@@ -135,6 +135,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classes\About.cs" />
     <Compile Include="Models\Classes\Admin.cs" />
+    <Compile Include="Models\Classes\BlogComment.cs" />
     <Compile Include="Models\Classes\Comment.cs" />
     <Compile Include="Models\Classes\Contact.cs" />
     <Compile Include="Models\Classes\Context.cs" />
