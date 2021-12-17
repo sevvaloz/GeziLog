@@ -11,9 +11,13 @@ namespace GeziLog.Controllers
     {
         // GET: Index
 
+        Context contextBlogs = new Context();
+        BlogComment bc = new BlogComment();
+
         public ActionResult Index()
         {
-            return View();
+            bc.Value3 = contextBlogs.Blogs.OrderByDescending(x=>x.ID).Take(2).ToList();
+            return View(bc);
         }
 
         // GET: About
@@ -34,21 +38,34 @@ namespace GeziLog.Controllers
 
         // GET: Blogs
 
-        Context contextBlogs = new Context();
+        //Context contextBlogs = new Context();
+        //BlogComment bc = new BlogComment();
         public ActionResult Blogs()
         {
-            var values = contextBlogs.Blogs.ToList(); 
-            return View(values);
+            //bc.Value1 = contextBlogs.Blogs.ToList();
+            //bc.Value3 = contextBlogs.Blogs.Take(2).ToList();
+            //return View(bc);
+            bc.Value1 = contextBlogs.Blogs.ToList();
+            return View(bc);
         }
 
         // GET: Single
-        BlogComment bc = new BlogComment();
+        
         public ActionResult Single(int id)
         {
             //var findBlog = contextBlogs.Blogs.Where(x=>x.ID == id).ToList();
             bc.Value1 = contextBlogs.Blogs.Where(x=> x.ID == id).ToList();
             bc.Value2 = contextBlogs.Comments.Where(x=> x.Blogid==id).ToList();
             return View(bc);
+        }
+
+        // GET: PartialView
+
+        Context contextPartial = new Context();
+        public PartialViewResult Partial()
+        {
+            var values = contextPartial.Blogs.OrderByDescending(x => x.Date).Take(1).ToList();
+            return PartialView(values);
         }
     }
 }
