@@ -38,13 +38,8 @@ namespace GeziLog.Controllers
 
         // GET: Blogs
 
-        //Context contextBlogs = new Context();
-        //BlogComment bc = new BlogComment();
         public ActionResult Blogs()
         {
-            //bc.Value1 = contextBlogs.Blogs.ToList();
-            //bc.Value3 = contextBlogs.Blogs.Take(2).ToList();
-            //return View(bc);
             bc.Value1 = contextBlogs.Blogs.ToList();
             return View(bc);
         }
@@ -59,13 +54,20 @@ namespace GeziLog.Controllers
             return View(bc);
         }
 
-        // GET: PartialView
-
-        Context contextPartial = new Context();
-        public PartialViewResult Partial()
+        //Context contextComment = new Context();
+        // GET: PartialView: ToComment
+        [HttpGet]
+        public PartialViewResult ToComment(int id)
         {
-            var values = contextPartial.Blogs.OrderByDescending(x => x.Date).Take(1).ToList();
-            return PartialView(values);
+            ViewBag.value = id;
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult ToComment(Comment c)
+        {
+            contextBlogs.Comments.Add(c);
+            contextBlogs.SaveChanges();
+            return PartialView();
         }
     }
 }

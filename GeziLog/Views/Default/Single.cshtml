@@ -44,24 +44,4 @@
     </ul>
 }
 
-
-
-<section class="w3l-contact" id="contact">
-    <div class="container py-5">
-        <div class="contacts12-main py-md-3">
-            <div class="header-section text-center">
-                <h3 class="mb-md-5 mb-4">Yorum bırakın</h3>
-            </div>
-            <form action="mailto:publication@mail.com" method="post" class="">
-                <div class="main-input">
-                    <input type="text" name="w3lName" placeholder="Ad" class="contact-input" required="" />
-                    <input type="email" name="w3lSender" placeholder="Mail" class="contact-input" required="" />
-                    <textarea class="contact-textarea contact-input" name="w3lMessage" placeholder="Mesaj girin" required=""></textarea>
-                </div>
-                <div class="text-right">
-                    <button class="btn-primary btn theme-button">GÖNDER</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+@Html.Action("ToComment", "Default")
