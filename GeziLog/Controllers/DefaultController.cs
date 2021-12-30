@@ -14,6 +14,7 @@ namespace GeziLog.Controllers
         Context contextBlogs = new Context();
         BlogComment bc = new BlogComment();
 
+
         public ActionResult Index()
         {
             bc.Value3 = contextBlogs.Blogs.OrderByDescending(x=>x.ID).Take(2).ToList();
@@ -46,7 +47,7 @@ namespace GeziLog.Controllers
 
         // GET: Single
         
-        public ActionResult Single(int id)
+        public ActionResult BlogDetails(int id)
         {
             //var findBlog = contextBlogs.Blogs.Where(x=>x.ID == id).ToList();
             bc.Value1 = contextBlogs.Blogs.Where(x=> x.ID == id).ToList();

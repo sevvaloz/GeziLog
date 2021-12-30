@@ -130,6 +130,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -153,6 +154,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Login Tema\css\style.css" />
+    <Content Include="Login Tema\images\thumb.jpg" />
+    <Content Include="Login Tema\index.html" />
+    <Content Include="Login Tema\w3layouts-License.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="web2\about.html" />
@@ -177,37 +182,9 @@
     <Content Include="web\about.html" />
     <Content Include="web\assets\css\style-starter.css" />
     <Content Include="web\assets\fonts\fontawesome-webfont.svg" />
-    <Content Include="web\assets\images\about.jpg" />
-    <Content Include="web\assets\images\author.jpg" />
-    <Content Include="web\assets\images\author1.jpg" />
-    <Content Include="web\assets\images\author2.jpg" />
-    <Content Include="web\assets\images\author3.jpg" />
-    <Content Include="web\assets\images\author4.jpg" />
-    <Content Include="web\assets\images\author5.jpg" />
-    <Content Include="web\assets\images\author6.jpg" />
-    <Content Include="web\assets\images\author7.jpg" />
-    <Content Include="web\assets\images\author8.jpg" />
-    <Content Include="web\assets\images\author9.jpg" />
-    <Content Include="web\assets\images\avatar.jpg" />
-    <Content Include="web\assets\images\banner1.jpg" />
-    <Content Include="web\assets\images\banner2.jpg" />
-    <Content Include="web\assets\images\banner3.jpg" />
     <Content Include="web\assets\images\i1.jpg" />
     <Content Include="web\assets\images\i2.jpg" />
     <Content Include="web\assets\images\i3.jpg" />
-    <Content Include="web\assets\images\img1.jpg" />
-    <Content Include="web\assets\images\img10.jpg" />
-    <Content Include="web\assets\images\img11.jpg" />
-    <Content Include="web\assets\images\img12.jpg" />
-    <Content Include="web\assets\images\img2.jpg" />
-    <Content Include="web\assets\images\img3.jpg" />
-    <Content Include="web\assets\images\img4.jpg" />
-    <Content Include="web\assets\images\img5.jpg" />
-    <Content Include="web\assets\images\img6.jpg" />
-    <Content Include="web\assets\images\img7.jpg" />
-    <Content Include="web\assets\images\img8.jpg" />
-    <Content Include="web\assets\images\img9.jpg" />
-    <Content Include="web\assets\images\main-author.jpg" />
     <Content Include="web\assets\js\bootstrap.min.js" />
     <Content Include="web\assets\js\easyResponsiveTabs.js" />
     <Content Include="web\assets\js\jquery-1.9.1.min.js" />
@@ -218,6 +195,8 @@
     <Content Include="web\contact.html" />
     <Content Include="web\index.html" />
     <Content Include="web\single.html" />
+    <Content Include="Login Tema\fonts\Asap-Regular.ttf" />
+    <Content Include="Login Tema\fonts\Audiowide-Regular.ttf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -252,12 +231,18 @@
     <Content Include="Views\Default\About.cshtml" />
     <Content Include="Views\Default\Contact.cshtml" />
     <Content Include="Views\Default\Blogs.cshtml" />
-    <Content Include="Views\Default\Single.cshtml" />
+    <Content Include="Views\Default\BlogDetails.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\NewBlog.cshtml" />
     <Content Include="Views\Admin\GetBlog.cshtml" />
     <Content Include="Views\Default\ToComment.cshtml" />
+    <Content Include="Views\Admin\CommentList.cshtml" />
+    <Content Include="Views\Admin\GetComment.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Admin\AboutList.cshtml" />
+    <Content Include="Views\Admin\NewAbout.cshtml" />
+    <Content Include="Views\Admin\GetAbout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
