@@ -15,16 +15,31 @@
         </div>
     </section>
 
-    <div class="about py-5">
+    @*<div class="about py-5">
         <div class="container py-lg-3">
             <div class="row">
-                <div class="col-lg-6 publication-about-grid">
+                <div class="col-lg-6 col-md-6 mt-lg-0 mt-5 real-about-grid float-left">
+                    <img src="@x.PhotoBlogURL" alt=" " class="img-fluid"/>
+                </div>
+                <div class="col-lg-6 publication-about-grid float-right">
                     <p class="mb-4">
                         @x.Content
                     </p>
                 </div>
-                <div class="col-lg-6 col-md-6 mt-lg-0 mt-5 real-about-grid">
-                    <img src="@x.PhotoBlogURL" alt=" " class="img-fluid" />
+            </div>
+        </div>
+    </div>*@
+
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span class="mr-3 mb-3 d-inline-block float-left">
+                        <img src="@x.PhotoBlogURL" alt=" " class="img-fluid blogPic"/>
+                    </span>
+                    <p class="mb-4">
+                        @x.Content
+                    </p>
                 </div>
             </div>
         </div>

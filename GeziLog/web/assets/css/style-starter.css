@@ -12003,3 +12003,8 @@ h2.resp-accordion:first-child {
 @media (max-width: 375px) {
   .w3l-contact .contact p {
     font-size: 15px; } }
+
+.blogPic {
+    width: 600px;
+    height: 400px;
+}
