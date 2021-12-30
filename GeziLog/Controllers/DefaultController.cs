@@ -32,6 +32,7 @@ namespace GeziLog.Controllers
 
         // GET: Contact
 
+        Context contextContacts = new Context();
         public ActionResult Contact()
         {
             return View();
@@ -68,6 +69,21 @@ namespace GeziLog.Controllers
         {
             contextBlogs.Comments.Add(c);
             contextBlogs.SaveChanges();
+            return PartialView();
+        }
+
+
+        // GET: PartialView: ToContact
+        [HttpGet]
+        public PartialViewResult ToContact()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult ToContact(Contact con)
+        {
+            contextContacts.Contacts.Add(con);
+            contextContacts.SaveChanges();
             return PartialView();
         }
     }

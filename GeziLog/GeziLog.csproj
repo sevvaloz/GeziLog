@@ -229,7 +229,6 @@
     <Content Include="web\assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="web\assets\fonts\FontAwesome.otf" />
     <Content Include="Views\Default\About.cshtml" />
-    <Content Include="Views\Default\Contact.cshtml" />
     <Content Include="Views\Default\Blogs.cshtml" />
     <Content Include="Views\Default\BlogDetails.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
@@ -243,6 +242,9 @@
     <Content Include="Views\Admin\AboutList.cshtml" />
     <Content Include="Views\Admin\NewAbout.cshtml" />
     <Content Include="Views\Admin\GetAbout.cshtml" />
+    <Content Include="Views\Default\Contact.cshtml" />
+    <Content Include="Views\Default\ToContact.cshtml" />
+    <Content Include="Views\Admin\ContactList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

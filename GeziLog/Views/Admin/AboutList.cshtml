@@ -9,20 +9,20 @@
 <br />
 <table class="table table-bordered">
     <tr>
-        <th> ABOUT ID </th>
-        <th> ABOUT İÇERİK </th>
-        <th> ABOUT SİL </th>
-        <th> ABOUT GÜNCELLE </th>
-        <th> ABOUT DETAYLARI </th>
+        <th> ID </th>
+        <th> İÇERİK </th>
+        <th> SİL </th>
+        <th> GÜNCELLE </th>
+        <th> DETAYLAR </th>
     </tr>
     @foreach (var x in Model)
     {
         <tr>
-            <th> @x.ID </th>
-            <th> @x.Content </th>
-            <th> <a href="/Admin/DeleteAbout/@x.ID" class="btn btn-danger">Sil</a></th>
-            <th> <a href="/Admin/GetAbout/@x.ID" class="btn btn-warning">Güncelle</a></th>
-            <th> <a href="/Default/About/" class="btn btn-primary">Detaylar</a></th>
+            <td> @x.ID </td>
+            <td> @x.Content </td>
+            <td> <a href="/Admin/DeleteAbout/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td> <a href="/Admin/GetAbout/@x.ID" class="btn btn-warning">Güncelle</a></td>
+            <td> <a href="/Default/About/" class="btn btn-primary">Detaylar</a></td>
         </tr>
     }
 </table>

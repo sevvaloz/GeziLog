@@ -59,6 +59,9 @@ namespace GeziLog.Controllers
             return RedirectToAction("Index");
         }
 
+
+
+
         // GET: Admin (yorum listesi)
         public ActionResult CommentList()
         {
@@ -92,6 +95,9 @@ namespace GeziLog.Controllers
         //    contextAdmin.SaveChanges();
         //    return RedirectToAction("CommentList");
         //}
+
+
+
 
 
         // GET: Admin (about listeleme)
@@ -135,6 +141,27 @@ namespace GeziLog.Controllers
             var findedAbout2 = contextAdmin.Abouts.Find(a.ID);
             findedAbout2.Content = a.Content;
             findedAbout2.PhotoAboutURL = a.PhotoAboutURL;
+            contextAdmin.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
+
+        // GET: Admin (contact listeleme)
+        public ActionResult ContactList()
+        {
+            var contacts = contextAdmin.Contacts.ToList();
+            return View(contacts);
+        }
+
+        // GET: Admin (contact silme)
+        public ActionResult DeleteContact(int id)
+        {
+            var findedContact = contextAdmin.Contacts.Find(id);
+            contextAdmin.Contacts.Remove(findedContact);
             contextAdmin.SaveChanges();
             return RedirectToAction("Index");
         }
