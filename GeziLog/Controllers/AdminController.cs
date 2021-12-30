@@ -85,16 +85,7 @@ namespace GeziLog.Controllers
             return View("GetComment", comment);
         }
 
-        // GET: Admin (yorum güncelle)
-        //public ActionResult UpdateComment(Comment c)
-        //{
-        //    var comment = contextAdmin.Comments.Find(c.ID);
-        //    comment.UserName = c.UserName;
-        //    comment.Mail = c.Mail;
-        //    comment.CommentArea = c.CommentArea;
-        //    contextAdmin.SaveChanges();
-        //    return RedirectToAction("CommentList");
-        //}
+
 
 
 
