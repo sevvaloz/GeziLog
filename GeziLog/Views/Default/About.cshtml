@@ -15,31 +15,12 @@
     </div>
 </section>
 
-@foreach (var x in Model)
-{
-    @*<div class="about py-5">
-            <div class="container py-lg-3">
-                <div class="row">
-                    <div class="col-lg-6 publication-about-grid">
-                        <p class="mb-4"> @x.Content </p>
-                    </div>
-                    <div class="col-lg-6 col-md-6 mt-lg-0 mt-5 real-about-grid">
-                        <img src=@x.PhotoAboutURL alt=" " class="img-fluid" />
-                    </div>
-                </div>
-            </div>
-        </div>*@
-
-
-}
-
-
 
 @foreach (var x in Model)
 {
     <div class="about py-md-5 py-4">
         <div class="container">
-            <div class="">
+            <div>
                 <div class="row p-3 align-items-center">
                     <div class="col-6 col-md-3 px-5">
                         <img src="@x.PhotoAboutURL" alt="" class="rounded-circle img-fluid">
