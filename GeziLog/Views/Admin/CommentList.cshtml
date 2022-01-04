@@ -6,6 +6,7 @@
 }
 
 <h2>Yorumlar</h2>
+@Html.Action("TotalComment", "Admin")
 <br />
 
 <table class="table table-bordered">
@@ -17,18 +18,17 @@
         <th>BLOG</th>
         <th>YORUM SİL</th>
         <th>YORUM DETAYLARI</th>
-        @*<th>Güncelle</th>*@
     </tr>
     @foreach (var x in Model)
     {
-<tr>
-    <td>@x.ID</td>
-    <td>@x.UserName</td>
-    <td>@x.Mail</td>
-    <td>@x.CommentArea</td>
-    <td>@x.Blog.Title</td>
-    <td><a href="/Admin/DeleteComment/@x.ID" class="btn btn-danger">Sil</a></td>
-    <td> <a href="/Default/BlogDetails/@x.Blogid" class="btn btn-primary">Detaylar</a></td>
-</tr>
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.UserName</td>
+            <td>@x.Mail</td>
+            <td>@x.CommentArea</td>
+            <td>@x.Blog.Title</td>
+            <td><a href="/Admin/DeleteComment/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td> <a href="/Default/BlogDetails/@x.Blogid" class="btn btn-primary">Detaylar</a></td>
+        </tr>
     }
 </table>

@@ -89,8 +89,6 @@ namespace GeziLog.Controllers
 
 
 
-
-
         // GET: Admin (about listeleme)
         public ActionResult AboutList()
         {
@@ -136,8 +134,14 @@ namespace GeziLog.Controllers
             return RedirectToAction("Index");
         }
 
+        
 
-
+        //Toplam Yorum Listeleme
+        public PartialViewResult TotalComment()
+        {
+            var tc = contextAdmin.Counters.ToList();
+            return PartialView(tc);
+        }
 
 
 
