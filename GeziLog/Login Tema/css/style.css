@@ -40,8 +40,9 @@ img{max-width:100%;}
 
 
 body {
-    background: url(../images/thumb.jpg) 0px 0px no-repeat;
+    background-color:lightcoral;
 }
+
 .padding-all {
     font-family: Helvetica Neue, sans-serif;
     padding: 100px;
