@@ -1,0 +1,1 @@
+We developed this project as a term paper at Izmir Bakircay University/ Department of Computer Engineering. It's a blog sharing website that we have developed using Asp.net MCV and SQL Server technologies.
